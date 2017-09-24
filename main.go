@@ -23,5 +23,6 @@ func AppRootHandler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	http.HandleFunc("/", AppRootHandler)
+	fmt.Print("Listening on port 1337")
 	log.Fatal(http.ListenAndServe(":1337", nil))
 }
